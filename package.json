@@ -1,0 +1,31 @@
+{
+  "name": "NFT-based-photo-marketplace",
+  "version": "1.0.0",
+  "description": "NFT-based-photo-marketplace",
+  "main": "index.js",
+  "scripts": {
+    "test": "truffle test ./test/*",
+    "start-blank": "rm -rf client/src && cp -rf barebones/src client/",
+    "client": "cd client && npm run start",
+    "console": "truffle console --network local",
+    "migrate:local": "truffle migrate --reset --network local",
+    "migrate:ropsten": "truffle migrate --reset --network ropsten",
+    "compile": "truffle compile --all",
+    "deploy:test": "truffle deploy --network testnet --reset --compile-none",
+    "deploy:bsc": "truffle deploy --network bsc --reset --compile-none",
+    "deploy:ropsten": "truffle deploy --network ropsten --reset --compile-none"
+  },
+  "author": "Hermes",
+  "license": "MIT",
+  "dependencies": {
+    "@ethereumjs/common": "^2.6.0",
+    "@ethereumjs/tx": "^3.4.0",
+    "@openzeppelin/contracts-upgradeable": "^4.4.1",
+    "@truffle/hdwallet-provider": "^1.2.0",
+    "dotenv": "^8.2.0",
+    "pify": "^5.0.0"
+  },
+  "devDependencies": {
+    "@openzeppelin/truffle-upgrades": "^1.11.0"
+  }
+}
